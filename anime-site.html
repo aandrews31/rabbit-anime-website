@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        display: block;
+        color: #74524cbb;
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+      body {
+        background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+        margin: 30px 30px 0px 30px;
+        padding-bottom: 50px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: #5c423e;
+        padding: 13px;
+        border: 4px solid;
+        border-color: #44312d;
+        border-radius: 10px;
+        color: white;
+        font-size: 18px;
+        box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.5);
+      }
+      button:hover {
+        background-color: #5c423e90;
+        border-color: #44312d90;
+        cursor: pointer;
+        transition: 200ms ease-in-out;
+      }
+      h1 {
+        text-align: center;
+        color: #5c423e;
+        font-size: 35px;
+        font-weight: 600;
+      }
+      h2 {
+        text-align: center;
+        color: #74524cbb;
+        font-size: 24px;
+        line-height: 30px;
+      }
+      hr {
+        max-width: 80%;
+        height: 2px;
+        background: #74524c5d;
+      }
+      p {
+        font-size: 20px;
+        color: #44312d;
+      }
+      span {
+        color: #5c423ebb;
+      }
+      .banner {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        border-radius: 30px 30px 30px 30px;
+        padding: 10px;
+      }
+      .leftImage {
+        float: left;
+        max-width: 400px;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      .rightImage {
+        float: right;
+        max-width: 400px;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      .paragraph1 {
+        text-indent: 40px;
+      }
+      .paragraph2 {
+        text-indent: 40px;
+      }
+      .lastParagraph {
+        text-indent: 40px;
+        padding-top: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      class="banner"
+      src="https://m.media-amazon.com/images/M/MV5BOTBmZDBhN2MtYjhjMS00NzU2LTkwZmEtODc0ZGM2NjY1ZTZhXkEyXkFqcGdeQXVyMTMxNjE5MjI2._V1_.jpg"
+      alt="Is The Order a Rabbit? Banner"
+    />
+    <h1>"Is The Order a Rabbit?"</h1>
+    <hr />
+    <h2>
+      ~An <span><em>Animation</em></span> Based on a Real Town~
+    </h2>
+    <p class="paragraph1">
+      That <em>Gochuumon wa Usagi Desu Ka?</em> is set in a town inspired by
+      France’s Colmar is a badly-kept secret. Located in the Alsace region of
+      north-eastern France, Colmar is a town with a population of roughly 67,214
+      (as of 2009, with a metro population of 126,957) and is best known for its
+      well-preserved old town, museums and landmarks.
+    </p>
+    <img
+      class="leftImage"
+      src="https://infinitemirai.files.wordpress.com/2015/11/vlcsnap-00179.png?w=630&h=354"
+      alt="Background Drawing In Animation"
+    />
+    <p class="paragraph2">
+      <strong>Colmar</strong> was founded in the ninth century and changed hands
+      several times during the course of its history: it was taken by Sweden
+      during the Thirty Years’ War in 1632, re-conquered by King Louis XIV in
+      1673 and annexed into Prussia in 1871 after the Franco-Prussian War.
+      Returned to France after World War I as a part of the terms outlined in
+      the Treaty of Versailles, Nazi Germany annexed Colmar in 1940 and finally,
+      in 1945, Colmar was returned back to France.
+    </p>
+    <img
+      class="rightImage"
+      src="https://infinitemirai.files.wordpress.com/2015/11/20140427-1818.jpg?w=630&h=420"
+      alt="Photograph of Colmar"
+    />
+    <p class="lastParagraph">
+      The area has a sunny and dry climate as a result of its proximity to the
+      mountains, and consequently, Colmar is home of some of the best Alsace
+      wine. Despite its turbulent history, Colmar’s old town remains
+      well-preserved, spared the razing and strategic bombing that leveled
+      cities throughout Europe during wartime: Germanic and French influence is
+      seen in its sandstone and timber-framed buildings, and its fairy tale-like
+      atmosphere means Colmar serves as the inspiration for Gochuumon wa Usagi
+      Desu Ka?.
+    </p>
+    <a
+      href="https://infinitemirai.wordpress.com/2015/11/01/colmar-france-home-of-gochuumon-wa-usagi-desu-ka/"
+      target="_blank"
+      ><div>Read The Original Article</div>
+    </a>
+    <button>Book A Trip To Colmar</button>
+    <script>
+      alert("Welcome!");
+      function bookTrip() {
+        let age = prompt("What is your age?");
+        let buttonText = document.querySelector("button");
+        if (age < 18) {
+          buttonText.innerHTML = "Sorry, you must be 18 or older!";
+        } else {
+          if (age >= 18) {
+            let email = prompt("What is your email?");
+            buttonText.innerHTML = "Thank you, check your inbox!";
+          }
+        }
+      }
+      let bookTripButton = document.querySelector("button");
+      bookTripButton.addEventListener("click", bookTrip);
+    </script>
+  </body>
+</html>
